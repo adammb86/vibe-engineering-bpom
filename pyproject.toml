@@ -1,0 +1,19 @@
+[project]
+name = "vibe-engineering-bpom"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Adam Mukharil Bachtiar", email = "adammbachtiar@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "jupyterlab>=4.6.4",
+]
+
+[project.scripts]
+vibe-engineering-bpom = "vibe_engineering_bpom:main"
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
