@@ -153,7 +153,7 @@ jobs:
         run: uv sync --dev
 
       - name: Run Tests with Coverage
-        run: uv run pytest test_main.py -v --cov=main
+        run: uv run pytest tests/test_main.py -v --cov=main
 ```
 
 🤖 **Prompt**
@@ -166,7 +166,7 @@ Buatkan GitHub Actions workflow di `.github/workflows/ci.yml` bernama
 2. Install `uv` (astral-sh/setup-uv@v3) dengan cache aktif
 3. Setup Python 3.12
 4. Install dependencies dengan `uv sync --dev`
-5. Menjalankan `uv run pytest test_main.py -v --cov=main`
+5. Menjalankan `uv run pytest tests/test_main.py -v --cov=main`
 ```
 
 ---

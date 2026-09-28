@@ -8,7 +8,10 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "bcrypt>=5.0.0",
+    "fastapi[standard]>=0.141.1",
     "jupyterlab>=4.6.4",
+    "pymysql>=1.2.3",
 ]
 
 [project.scripts]
@@ -17,3 +20,14 @@ vibe-engineering-bpom = "vibe_engineering_bpom:main"
 [build-system]
 requires = ["uv_build>=0.12.19,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+]
